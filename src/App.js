@@ -88,7 +88,10 @@ function App() {
           </div>
           <div className='profile info-cv'>
             <h3>CV / Experience</h3>
-            <a target='_blank' href='www.linkedin.com/in/nicolaasvdbroek'>
+            <a
+              target='_blank'
+              href='https://www.linkedin.com/in/nicolaasvdbroek'
+            >
               <span>linkedin.com/in/nicolaasvdbroek</span>
             </a>
           </div>
