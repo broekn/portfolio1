@@ -41,15 +41,16 @@ const ProgressBar = ({ skill, progress }) => {
         </svg> */}
 
         <div className='progress-bar-bg'>
-          <CSSTransition
-            in={true}
-            timeout={2000}
-            appear={true}
-            className='progress-bar'
-            style={{ width: `${progress}%` }}
-          >
-            <div></div>
-          </CSSTransition>
+          <div className='progress-bar-wrap' style={{ width: `${progress}%` }}>
+            <CSSTransition
+              className='progress-bar'
+              in={true}
+              timeout={300}
+              appear={true}
+            >
+              <div></div>
+            </CSSTransition>
+          </div>
         </div>
       </div>
     </>
