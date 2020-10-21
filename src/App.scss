@@ -1,28 +1,8 @@
-/* Nicolaas' Normalise */
-
-:root {
-  --bgrey1: #e3e4ec;
-  --bgrey2: #c3c5d7;
-  --black1: #0000001a;
-  --white1: #2322241a;
-  --whitebg: #dfd9e41a;
-  --darkmodebg: rgb(40, 39, 43);
-  --xxx: #ddd;
-  --uiblue: #2133d6;
-  --uilblue: #00e0ff;
-  --uired: #ff8181;
-}
 @font-face {
   font-family: 'custom-serif';
   font-style: normal;
   font-weight: 700;
-  src: url('assets/Custom-ExtraBold.woff') format('woff');
-}
-@font-face {
-  font-family: 'custom-serif';
-  font-style: normal;
-  font-weight: 700;
-  src: url('assets/Custom-ExtraBold.woff') format('woff');
+  src: url('assets/custom-extra-bold.woff') format('woff');
 }
 
 @font-face {
@@ -80,10 +60,6 @@
   }
 }
 
-$spotOne: #26115a;
-$spotTwo: #ff8181;
-$spotThree: #ff8181;
-
 html,
 body,
 #root,
@@ -112,6 +88,9 @@ button {
   border-radius: 60px;
   font-size: 1rem;
   font-family: inherit;
+  &:focus {
+    outline: none;
+  }
 }
 .button {
   display: flex;
@@ -189,9 +168,7 @@ input::-moz-focus-inner {
     opacity: 0.02;
   }
 }
-.app.dark {
-  background: var(--darkmodebg);
-}
+
 body {
   font-family: 'eina_04-semibold', 'custom-serif', -apple-system,
     BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans',
@@ -199,7 +176,6 @@ body {
   font-size: 16px;
   font-weight: normal;
   line-height: 1.2;
-  color: #222;
   color: white;
 }
 body,
@@ -254,24 +230,45 @@ aside {
   height: 30px;
   width: 70px;
   display: flex;
-  position: relative;
-  transition: all 1s ease;
+  transition: order 1s ease;
+  padding: 5px 5px;
+  align-items: center;
+  justify-content: space-between;
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  &-text {
+    order: 2;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  span {
+    order: 2;
+    cursor: default;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 0 3px;
+    opacity: 0.5;
+    user-select: none;
+  }
   &-knob {
-    position: absolute;
     background: white;
     border-radius: 20px;
     height: 20px;
     width: 20px;
-    top: 5px;
+    flex: 0 0 auto;
   }
   &-off {
     .ios-switch-knob {
-      left: 5px;
+      order: 1;
     }
   }
   &-on {
     .ios-switch-knob {
-      left: 45px;
+      order: 2;
     }
   }
 }
@@ -313,6 +310,9 @@ header {
     }
   }
 }
+.wrapper {
+  position: relative;
+}
 aside {
   font-family: fira-mono, monospace;
   font-weight: 400;
@@ -348,7 +348,8 @@ aside {
   .profile {
     margin-bottom: 20px;
     a {
-      font-size: 0.9rem;
+      font-size: 1rem;
+      // font-size: 0.9rem;
 
       display: inline-block;
       position: relative;
@@ -382,12 +383,11 @@ aside {
       margin-top: 0;
     }
     &.info-email p {
-      font-family: 'eina_04-semibold', 'custom-serif', -apple-system;
+      //font-family: 'eina_04-semibold', 'custom-serif', -apple-system;
       letter-spacing: 1px;
       text-decoration: none;
       display: inline-block;
       &:before {
-        //    content: 'broekn@gmail.com';
         content: attr(data-1) '' attr(data-2) '' attr(data-3) '' attr(data-4) ''
           attr(data-5);
         display: block;
@@ -498,7 +498,6 @@ main {
     }
     &.appear-done {
       width: 100%;
-      //transition: width 0.5s ease-in-out;
     }
   }
   span#xxx {
@@ -549,11 +548,10 @@ main {
   }
   .wrapper {
     display: flex;
-    position: relative;
   }
   aside {
     max-width: 440px;
-    padding: 30px 2% 30px 3%;
+    padding: 30px 3% 30px 3%;
     .profile {
       margin-bottom: 50px;
     }
@@ -578,7 +576,6 @@ main {
       display: block;
 
       &:first-child {
-        // font-size: 38px;
         color: var(--uilblue);
       }
       &:nth-child(2) {
@@ -634,7 +631,6 @@ main {
       display: block;
       margin-left: -20%;
       &:first-child {
-        //font-size: 38px;
         color: var(--uilblue);
         margin-left: -15%;
       }
@@ -691,20 +687,8 @@ main {
   h1 {
     span {
       font-size: 88px;
-
-      //   margin-left: -15%;
-      &:first-child {
-        // font-size: 58px;
-        //     margin-left: -21%;
-      }
-      &:nth-child(2) {
-        //    margin-left: -21%;
-      }
-      &:last-child {
-      }
     }
   }
-
   main {
     padding-right: 10%;
     padding-left: 10%;
@@ -792,6 +776,117 @@ main {
         list-style: square;
         position: relative;
       }
+    }
+  }
+}
+
+.app.dark {
+  background: var(--darkmodebg);
+  background: #ffeeee;
+  &:before {
+    background-color: transparent;
+    background-size: 5px 100%;
+    background-image: linear-gradient(
+      90deg,
+      rgb(196, 155, 155) 1px,
+      transparent 2px
+    );
+    opacity: 0.1;
+  }
+  body {
+    color: white;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label,
+  input,
+  ul,
+  li,
+  p,
+  a {
+    color: var(--red1);
+  }
+  header,
+  aside,
+  main {
+    h3 {
+      opacity: 0.7;
+    }
+  }
+  header {
+    h3 {
+      color: var(--red1);
+    }
+  }
+  main h1 span {
+    color: var(--red1);
+  }
+  aside {
+    .profile {
+      a {
+        border-color: var(--red1);
+      }
+    }
+  }
+  .skills {
+    .progress-bar-bg {
+      height: 7px;
+      border-radius: 5px;
+      background: var(--red1bg);
+    }
+    .progress-bar {
+      height: 7px;
+      border-radius: 5px;
+      background: var(--red1);
+    }
+  }
+  .button {
+    &-small {
+      border: 2px solid var(--red1bg);
+      color: var(--red);
+      &:hover {
+        background: var(--red1bg);
+      }
+    }
+    &-primary {
+      box-shadow: none;
+      span {
+        color: white;
+      }
+      &:hover {
+        background: var(--red1);
+      }
+    }
+  }
+  .work-history {
+    .description {
+      a,
+      span {
+        opacity: 1;
+      }
+    }
+    .company-list {
+      & > li ul,
+      p {
+        opacity: 0.6;
+      }
+      li:before,
+      li:after {
+        background: var(--red1);
+      }
+    }
+  }
+
+  .ios-switch {
+    background: var(--red2bg);
+    span {
+      color: white;
+      opacity: 1;
     }
   }
 }

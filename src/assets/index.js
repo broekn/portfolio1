@@ -1,0 +1,27 @@
+export const mugshot2 = require('./me2.jpg');
+export const icnexternal = require('./icn-arrow-ext.svg');
+export const icncss = require('./icn-css.svg');
+export const icnfigma = require('./icn-figma.svg');
+export const icngit = require('./icn-git.svg');
+export const icnhtml5 = require('./icn-html5.svg');
+export const icnillu = require('./icn-illu.svg');
+export const icninvision = require('./icn-invision.svg');
+export const icnjs = require('./icn-js.svg');
+export const icnnpm = require('./icn-npm.svg');
+export const icnreact = require('./icn-react.svg');
+export const icnsketch = require('./icn-sketch.svg');
+export const icnvscode = require('./icn-vscode.svg');
+
+// import mugshot from './assets/me.jpg';
+// import icnexternal from './assets/icn-arrow-ext.svg';
+// import icncss from './assets/icn-css.svg';
+// import icnfigma from './assets/icn-figma.svg';
+// import icngit from './assets/icn-git.svg';
+// import icnhtml5 from './assets/icn-html5.svg';
+// import icnillu from './assets/icn-illu.svg';
+// import icninvision from './assets/icn-invision.svg';
+// import icnjs from './assets/icn-js.svg';
+// import icnnpm from './assets/icn-npm.svg';
+// import icnreact from './assets/icn-react.svg';
+// import icnsketch from './assets/icn-sketch.svg';
+// import icnvscode from './assets/icn-vscode.svg';

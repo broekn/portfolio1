@@ -2,46 +2,54 @@ import React, { useEffect, useState } from 'react';
 import ReactTooltip from 'react-tooltip';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import logo from './logo.svg';
-import mugshot from './assets/me.jpg';
-import icnexternal from './assets/icn-arrow-ext.svg';
-import icncss from './assets/icn-css.svg';
-import icnfigma from './assets/icn-figma.svg';
-import icngit from './assets/icn-git.svg';
-import icnhtml5 from './assets/icn-html5.svg';
-import icnillu from './assets/icn-illu.svg';
-import icninvision from './assets/icn-invision.svg';
-import icnjs from './assets/icn-js.svg';
-import icnnpm from './assets/icn-npm.svg';
-import icnreact from './assets/icn-react.svg';
-import icnsketch from './assets/icn-sketch.svg';
-import icnvscode from './assets/icn-vscode.svg';
-import './App.scss';
-//import './bootstrap.css';
+import './app.scss';
+import './variables.scss';
+
 import IosSwitch from './IosSwitch.js';
 import ProgressBar from './ProgressBar.js';
 import skillData from './skillData.js';
 import {
-  TransitionGroup,
-  Transition,
-  CSSTransition,
-} from 'react-transition-group';
+  mugshot2,
+  icnexternal,
+  icncss,
+  icnfigma,
+  icngit,
+  icnhtml5,
+  icnillu,
+  icninvision,
+  icnjs,
+  icnnpm,
+  icnreact,
+  icnsketch,
+  icnvscode,
+} from './assets/index.js';
 
-function App() {
+const App = () => {
   const [theme, setTheme] = useState('light');
   const [iosSwitchState, setIosSwitchState] = useState('on');
   const [copiedText, setCopiedText] = useState('');
   let e1 = 'broekn';
   let e2 = '@gmail.com';
 
-  function handleClick() {
-    if (theme === 'dark') {
-      setTheme('light');
-      setIosSwitchState('off');
-    } else if (theme === 'light') {
+  const handleClick = () => {
+    // setTheme((prevS) => {
+    //   return {
+    //     theme: prevS.theme === 'light' ? 'dark' : 'light',
+    //   };
+    // });
+    // setIosSwitchState((prevS) => {
+    //   return {
+    //     theme: prevS.theme === 'on' ? 'off' : 'on',
+    //   };
+    // });
+    if (theme === 'light') {
       setTheme('dark');
+      setIosSwitchState('off');
+    } else if (theme === 'dark') {
+      setTheme('light');
       setIosSwitchState('on');
     }
-  }
+  };
 
   return (
     <div className={`app ${theme}`}>
@@ -55,9 +63,12 @@ function App() {
         <h2>Nicolaas Van den Broek</h2>
         <h3>UI/UX Designer + Developer</h3>
         <div className='theme-selector'>
-          <h5 className=''>UI Theme</h5>
-          <IosSwitch handleClick={handleClick} value={iosSwitchState} />
-          <br />
+          <h5 className=''>Theme</h5>
+          <IosSwitch
+            handleClick={handleClick}
+            value={iosSwitchState}
+            theme={theme}
+          />
         </div>
       </header>
       <div className='wrapper'>
@@ -70,7 +81,7 @@ function App() {
         </div>
         <aside>
           <div className='mugshot'>
-            <img src={mugshot} />
+            <img src={mugshot2} alt='mugshot' />
           </div>
           <h3>Key Tech + Apps</h3>
           <div className='tech-apps'>
@@ -90,6 +101,7 @@ function App() {
             <h3>CV / Experience</h3>
             <a
               target='_blank'
+              rel='noopener noreferrer'
               href='https://www.linkedin.com/in/nicolaasvdbroek'
             >
               <span>linkedin.com/in/nicolaasvdbroek</span>
@@ -97,7 +109,11 @@ function App() {
           </div>
           <div className='profile info-portfolio'>
             <h3>Portfolio</h3>
-            <a target='_blank' href='https://www.behance.net/humanclarity'>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://www.behance.net/humanclarity'
+            >
               <span>behance.net/humanclarity</span>
             </a>
           </div>
@@ -105,7 +121,7 @@ function App() {
             <h3>Email</h3>
             <p>{`${e1 + e2}`}</p>
             <CopyToClipboard text={`${e1 + e2}`}>
-              <button class='button-small'>Copy</button>
+              <button className='button-small'>Copy</button>
             </CopyToClipboard>
           </div>
           <div className='profile info-status'>
@@ -117,7 +133,8 @@ function App() {
           </div>
           <a
             target='_blank'
-            class='button button-primary'
+            rel='noopener noreferrer'
+            className='button button-primary'
             href='https://www.behance.net/humanclarity'
           >
             <span>Portfolio</span>
@@ -164,23 +181,37 @@ function App() {
                 </div>
               </div>
             </section>
-            <section class='work-history'>
+            <section className='work-history'>
               <h3>Work History:</h3>
-              <ul class='company-list'>
+              <ul className='company-list'>
                 <li>
                   <h4>Product Owner</h4>
-                  <div class='description'>
-                    <a>VitaminTracker</a>
-                    <span> • Startup • Founder • 2019 - (Spare-time)</span>
+                  <div className='description'>
+                    <a
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      href='https://www.behance.net/gallery/98751675/Vitamin_Tracker'
+                    >
+                      VitaminTracker
+                    </a>
+                    <span>
+                      VitaminTracker • Startup • Founder • 2019 - (Spare-time)
+                    </span>
                   </div>
                   <p>Tech: React Native</p>
                 </li>
                 <li>
                   <h4>Senior Visual and UI Designer + Developer</h4>
-                  <div class='description'>
-                    <a href='//:findex.com.au'>Findex </a>
+                  <div className='description'>
+                    <a
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      href='//findex.com.au'
+                    >
+                      Findex
+                    </a>
                     <span>
-                      • Finance/Fintech Company • 2500 Employees • 2015 -
+                      &nbsp;• Finance/Fintech Company • 2500 Employees • 2015 -
                       current
                     </span>
                   </div>
@@ -190,9 +221,18 @@ function App() {
                     improve in-house enterprise software applications.
                   </p>
                   <ul>
-                    <li>Tasking/Workflow product — Senior UI + Angular</li>
-                    <li>Scoping/Budgeting tool — Senior UI</li>
-                    <li>Designed and developed an in-house design system</li>
+                    <li>
+                      Tasking/Workflow WebApp ('TeamFlow') — Senior UI +
+                      Material UI Dev{' '}
+                      {/* <a href='https://www.behance.net/gallery/99166183/TeamFlow_V2_LandingPage'>
+                        TeamFlow
+                      </a> */}
+                    </li>
+                    <li>
+                      Financial Management WebApp ('Ascend') — UI/UX Design +
+                      Consulting
+                    </li>
+                    <li>Scoping/Budgeting WebApp — Senior UI/UX</li>
                     <li>New Logo Design (Custom type)</li>
                     <li>Tutoring other designers</li>
                     <li>
@@ -203,8 +243,14 @@ function App() {
                 </li>
                 <li>
                   <h4>Designer + Front end Developer</h4>
-                  <div class='description'>
-                    <a href='//aptituredigital.com'>AptitureDigital</a>
+                  <div className='description'>
+                    <a
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      href='//aptituredigital.com'
+                    >
+                      AptitureDigital
+                    </a>
                     <span> • Digital Agency • 30 Employees • 2013 - 15</span>
                   </div>
                   <p>
@@ -218,9 +264,10 @@ function App() {
                 </li>
                 <li>
                   <h4>Visual and UI Designer</h4>
-                  <div class='description'>
-                    <a>WebDynamic</a>
-                    <span> • Digital Agency • 30 Employees • 2010 - 13</span>
+                  <div className='description'>
+                    <span>
+                      WebDynamic • Digital Agency • 30 Employees • 2010 - 13
+                    </span>
                   </div>
                   <p>
                     Creating WebApps, Web sites + Branding for small and med
@@ -238,6 +285,12 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
+
+(() => {
+  window.console.log(
+    '\n\n\n\n\n                      ++++++++++                         \n                +MMMMMMMMMMMMMMMMMMM+               \n            +MMMMMMMMMMMMMMMMMMMMMMMMMMM+           \n         +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+        \n        MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+      \n      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM     \n     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    \n    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMdhMMMMMMMMM   \n   MMMMMMMMMMm-sdMMMMMMMMMMMMMMMMMmo. +MMMMMMMMMMM  \n  +MMMMMMMMMMd   .+hNMMMMMMMMMMMd-    +MMMMMMMMMMM+  \n  MMMMMMMMMMMd      `:smMMMMMMMMy     +MMMMMMMMMMMM \n +MMMMMMMMMMMd          -odMMMMMh.    +MMMMMMMMMMMM+ \n MMMMMMMMMMMMMdo-          `/yNMMMdo- +MMMMMMMMMMMM+ \n MMMMMMMMMMMMMMMMms:`          -sdMMMmdMMMMMMMMMMMM+ \n MMMMMMMMMMMMd.+hMMMNh+.          .+hNMMMMMMMMMMMMM+ \n MMMMMMMMMMMMd   `/hMMMMmo-          `sMMMMMMMMMMMM+ \n +MMMMMMMMMMMd     -MMMMMMMNy/`       +MMMMMMMMMMMM \n  MMMMMMMMMMMd     -MMMMMMMMMMMdo-    +MMMMMMMMMMM+  \n  +MMMMMMMMMMd  `/hNMMMMMMMMMMMMMMms:`+MMMMMMMMMMM  \n   MMMMMMMMMMm/hNMMMMMMMMMMMMMMMMMMMMNmMMMMMMMMMM   \n    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    \n     +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+     \n       +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+      \n         +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM         \n            +MMMMMMMMMMMMMMMMMMMMMMMMMMM+           \n               +MMMMMMMMMMMMMMMMMMMMM+              \n                     +++++++++++                        \n \n \n \n \n'
+  );
+})();
