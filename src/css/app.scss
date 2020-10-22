@@ -60,12 +60,20 @@
   }
 }
 
-html,
+html {
+  height: 100%;
+}
+
+.app {
+  position: relative;
+}
+
 body,
 #root,
 .app {
-  height: 100%;
+  min-height: 100vh;
 }
+
 *,
 *::before,
 *::after {
@@ -155,7 +163,6 @@ input::-moz-focus-inner {
   &:before {
     content: '';
     display: block;
-    height: 100%;
     background-color: transparent;
     background-size: 5px 100%;
     background-image: linear-gradient(90deg, white 1px, transparent 2px);
@@ -165,7 +172,7 @@ input::-moz-focus-inner {
     right: 0;
     bottom: 0;
     z-index: 0;
-    opacity: 0.02;
+    opacity: 0.03;
   }
 }
 
@@ -481,6 +488,7 @@ main {
 
   .progress-bar {
     //transition: width 1s 1s ease-in-out;
+
     height: 9px;
     border-radius: 2px 0 0 2px;
     background-color: var(--uilblue);
@@ -492,7 +500,8 @@ main {
       var(--uilblue) 40%,
       transparent 40%
     );
-
+    filter: drop-shadow(0px 0px 6px var(--uilblue));
+    filter: drop-shadow(0px 0px 6px var(--uilblueglow));
     &.appear {
       width: 0;
     }
@@ -840,6 +849,7 @@ main {
       height: 7px;
       border-radius: 5px;
       background: var(--red1);
+      filter: none;
     }
   }
   .button {
@@ -852,11 +862,13 @@ main {
     }
     &-primary {
       box-shadow: none;
+      background: var(--red1);
       span {
         color: white;
       }
       &:hover {
-        background: var(--red1);
+        background: var(--uired);
+        opacity: 0.8;
       }
     }
   }
