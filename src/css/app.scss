@@ -314,6 +314,7 @@ header {
       font-size: 10px;
       margin: 0 auto 5px;
       text-transform: uppercase;
+      opacity: 0.8;
     }
   }
 }
@@ -786,7 +787,7 @@ main {
   }
 }
 
-.app.dark {
+.app.light {
   background: var(--darkmodebg);
   background: #ffeeee;
   &:before {
@@ -893,6 +894,9 @@ main {
 
   .ios-switch {
     background: var(--red2bg);
+    &:hover {
+      background: #5b3c404a;
+    }
     span {
       color: white;
       opacity: 1;

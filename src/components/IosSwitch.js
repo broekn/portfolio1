@@ -1,10 +1,10 @@
 import React from 'react';
 
-const IosSwitch = ({ handleClick, value, theme }) => {
+const IosSwitch = ({ handleClick, value, toggleTextValues }) => {
   return (
     <div onClick={handleClick} className={`ios-switch ios-switch-${value}`}>
       <div className='ios-switch-text'>
-        {value === 'on' ? <span>{theme}</span> : <span>{theme}</span>}
+        <span>{toggleTextValues}</span>
       </div>
       <div className='ios-switch-knob'></div>
     </div>

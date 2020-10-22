@@ -24,28 +24,29 @@ import {
 } from './assets/img/index.js';
 
 const App = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('saas');
   const [iosSwitchState, setIosSwitchState] = useState('on');
   const [copiedText, setCopiedText] = useState('');
   let e1 = 'broekn';
   let e2 = '@gmail.com';
 
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem('theme');
+    const localIosSwitch = window.localStorage.getItem('iosSwitchState');
+    setTheme(localTheme);
+    setIosSwitchState(localIosSwitch);
+  }, []);
+
   const handleClick = () => {
-    // setTheme((prevS) => {
-    //   return {
-    //     theme: prevS.theme === 'light' ? 'dark' : 'light',
-    //   };
-    // });
-    // setIosSwitchState((prevS) => {
-    //   return {
-    //     theme: prevS.theme === 'on' ? 'off' : 'on',
-    //   };
-    // });
-    if (theme === 'light') {
-      setTheme('dark');
-      setIosSwitchState('off');
-    } else if (theme === 'dark') {
+    if (theme === 'saas') {
+      window.localStorage.setItem('theme', 'light');
+      window.localStorage.setItem('iosSwitchState', 'off');
       setTheme('light');
+      setIosSwitchState('off');
+    } else if (theme === 'light') {
+      window.localStorage.setItem('theme', 'saas');
+      window.localStorage.setItem('iosSwitchState', 'on');
+      setTheme('saas');
       setIosSwitchState('on');
     }
   };
@@ -66,7 +67,7 @@ const App = () => {
           <IosSwitch
             handleClick={handleClick}
             value={iosSwitchState}
-            theme={theme}
+            toggleTextValues={theme}
           />
         </div>
       </header>
@@ -147,12 +148,12 @@ const App = () => {
             <span>Experiences.</span>
           </h1>
           <h2>
-            Creating good looking, easy-to-use and truly usefull SaaS
-            applications, mobile apps, websites and brands by utilising at
-            minimum current/2020 best-practice solutions or creating novel
-            solutions to unique problems. I have been creating products that
-            provide value for the user and in turn the business and it's
-            stakeholders for over 12 years.
+            Good looking, easy-to-use and truly usefull SaaS applications,
+            mobile apps, websites and brands by utilising at minimum
+            current/2020 best-practice solutions or creating novel solutions to
+            unique problems. I have been creating products that provide value
+            for the user and in turn the business and it's stakeholders for over
+            12 years.
           </h2>
           <div className='page-content'>
             <section>
