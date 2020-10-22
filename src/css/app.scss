@@ -2,20 +2,20 @@
   font-family: 'custom-serif';
   font-style: normal;
   font-weight: 700;
-  src: url('assets/custom-extra-bold.woff') format('woff');
+  src: url('./../assets/type/custom-extra-bold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'eina_04-bold';
   font-weight: normal;
   font-style: normal;
-  src: url('assets/eina04-bold-webfont.woff') format('woff');
+  src: url('./../assets/type/eina04-bold-webfont.woff') format('woff');
 }
 @font-face {
   font-family: 'eina_04-semibold';
   font-weight: bold;
   font-style: normal;
-  src: url('assets/eina04-semibold-webfont.woff') format('woff');
+  src: url('./../assets/type/eina04-semibold-webfont.woff') format('woff');
 }
 @mixin mediamax($max) {
   @media (max-width: $max) {
@@ -700,9 +700,6 @@ main {
   }
   section {
     margin-bottom: 30px;
-    h3 {
-      // min-width: 20%;
-    }
   }
 }
 

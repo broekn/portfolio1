@@ -1,0 +1,13 @@
+export const mugshot2 = require('./me.jpg');
+export const icnexternal = require('./icn-arrow-ext.svg');
+export const icncss = require('./icn-css.svg');
+export const icnfigma = require('./icn-figma.svg');
+export const icngit = require('./icn-git.svg');
+export const icnhtml5 = require('./icn-html5.svg');
+export const icnillu = require('./icn-illu.svg');
+export const icninvision = require('./icn-invision.svg');
+export const icnjs = require('./icn-js.svg');
+export const icnnpm = require('./icn-npm.svg');
+export const icnreact = require('./icn-react.svg');
+export const icnsketch = require('./icn-sketch.svg');
+export const icnvscode = require('./icn-vscode.svg');

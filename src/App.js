@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react';
 import ReactTooltip from 'react-tooltip';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import logo from './logo.svg';
-import './app.scss';
-import './variables.scss';
-
-import IosSwitch from './IosSwitch.js';
-import ProgressBar from './ProgressBar.js';
-import skillData from './skillData.js';
+import './css/app.scss';
+import './css/variables.scss';
+import IosSwitch from './components/IosSwitch.js';
+import ProgressBar from './components/ProgressBar.js';
+import skillData from './data/skillData.js';
 import {
   mugshot2,
   icnexternal,
@@ -22,7 +21,7 @@ import {
   icnreact,
   icnsketch,
   icnvscode,
-} from './assets/index.js';
+} from './assets/img/index.js';
 
 const App = () => {
   const [theme, setTheme] = useState('light');
@@ -194,9 +193,7 @@ const App = () => {
                     >
                       VitaminTracker
                     </a>
-                    <span>
-                      VitaminTracker • Startup • Founder • 2019 - (Spare-time)
-                    </span>
+                    <span> • Startup • Founder • 2019 - (Spare-time)</span>
                   </div>
                   <p>Tech: React Native</p>
                 </li>
