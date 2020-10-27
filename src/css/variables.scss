@@ -1,17 +1,17 @@
 :root {
-  --bgrey1: #e3e4ec;
-  --bgrey2: #c3c5d7;
-  --black1: #0000001a;
-  --white1: #2322241a;
-  --whitebg: #dfd9e41a;
-  --darkmodebg: rgb(40, 39, 43);
-  --xxx: #ddd;
-  --uiblue: #2133d6;
-  --uilblue: #00e0ff;
-  --uilblueglow: #00e1ff7a;
-  --uired: #ff8181;
-  --red: #885f65;
-  --red1: #5b3c40;
-  --red1bg: #5b1a1a1e;
-  --red2bg: #5b3c407c;
+  --brand-red: #ff8181;
+  --border-light: #ffffff09;
+  --white: 250, 250, 250;
+  --black: 0, 0, 0;
+
+  //themedark
+  --theme-blue: #2133d6;
+  --theme-aqua: #00e0ff;
+  --theme-aqua-glow: #00e1ff7a;
+
+  //themelight
+  --theme-red-bg: #ffeeee;
+  --theme-red: #5b3c40;
+  --theme-red-light: #5b3c407c;
+  --theme-red-lighter: #5b1a1a1e;
 }

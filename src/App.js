@@ -4,7 +4,8 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import logo from './logo.svg';
 import './css/app.scss';
 import './css/variables.scss';
-import IosSwitch from './components/IosSwitch.js';
+//import IosSwitch from './components/IosSwitch.js';
+import useDarkMode from './components/useDarkMode.js';
 import ProgressBar from './components/ProgressBar.js';
 import skillData from './data/skillData.js';
 import {
@@ -24,28 +25,12 @@ import {
 } from './assets/img/index.js';
 
 const App = () => {
-  const [darkTheme, setDarkTheme] = useState('saas');
+  const [darkTheme, handleClick] = useDarkMode();
   const [copiedText, setCopiedText] = useState('');
   let e1 = 'broekn';
   let e2 = '@gmail.com';
 
-  const handleClick = () => {
-    if (darkTheme === 'saas') {
-      window.localStorage.setItem('darkTheme', 'light');
-      setDarkTheme('light');
-    } else {
-      window.localStorage.setItem('darkTheme', 'saas');
-      setDarkTheme('saas');
-    }
-  };
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem('darkTheme');
-    if (localTheme) {
-      setDarkTheme(localTheme);
-      console.log('render');
-    }
-  }, []);
-
+  console.log(darkTheme, 'app');
   return (
     <div className={`app ${darkTheme === 'saas' ? 'saas' : 'light'}`}>
       <ReactTooltip />
@@ -59,7 +44,18 @@ const App = () => {
         <h3>UI/UX Designer + Developer</h3>
         <div className='theme-selector'>
           <h5 className=''>Theme</h5>
-          <IosSwitch handleClick={handleClick} darkTheme={darkTheme} />
+          {/* <IosSwitch /> */}
+          <div
+            onClick={handleClick}
+            className={`ios-switch ios-switch-${
+              darkTheme === 'saas' ? 'on' : 'off'
+            }`}
+          >
+            <div className='ios-switch-text'>
+              <span>{darkTheme === 'saas' ? 'saas' : 'light'}</span>
+            </div>
+            <div className='ios-switch-knob'></div>
+          </div>
         </div>
       </header>
       <div className='wrapper'>

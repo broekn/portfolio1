@@ -32,19 +32,15 @@
 }
 
 @mixin bartransition {
-  //$times: 0.1, 0.2, 0.3, 0.4, 0.5;
   @for $i from 1 through 6 {
     &:nth-child(#{$i}) .progress-bar.appear-done {
-      //transition: width 0.2s #{nth($times, $i)}s ease-out;
       transition: width 0.2s #{$i * 0.1}s ease-out;
     }
   }
 }
 @mixin bartransition2 {
-  //$times: 0.1, 0.2, 0.3, 0.4, 0.5;
   @for $i from 1 through 6 {
     &:nth-child(#{$i}) .progress-bar.appear-done {
-      //transition: width 0.2s #{nth($times, $i)}s ease-out;
       transition: width 0.2s #{$i * 0.1 + 0.5}s ease-out;
     }
   }
@@ -119,7 +115,6 @@ button {
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    /* font-family: arial; */
     display: inline-block;
     margin-left: 18px;
     transform: translateY(-2px);
@@ -128,7 +123,7 @@ button {
     }
   }
   &-primary {
-    background: var(--uired);
+    background: var(--brand-red);
     padding: 12px 40px 15px;
     font-size: 20px;
     border: none;
@@ -157,7 +152,7 @@ input::-moz-focus-inner {
   margin: 0;
 }
 .app {
-  background: var(--uiblue);
+  background: var(--theme-blue);
   overflow: auto;
   min-height: 100vh;
   &:before {
@@ -201,7 +196,7 @@ a {
 
 .topics,
 aside {
-  border-right: 2px solid rgba(255, 255, 255, 0.05);
+  border-right: 2px solid #{'rgba(var(--white), 0.05)'};
 }
 
 .preheader {
@@ -357,8 +352,6 @@ aside {
     margin-bottom: 20px;
     a {
       font-size: 1rem;
-      // font-size: 0.9rem;
-
       display: inline-block;
       position: relative;
       overflow: hidden;
@@ -391,7 +384,6 @@ aside {
       margin-top: 0;
     }
     &.info-email p {
-      //font-family: 'eina_04-semibold', 'custom-serif', -apple-system;
       letter-spacing: 1px;
       text-decoration: none;
       display: inline-block;
@@ -423,8 +415,7 @@ main {
       display: block;
 
       &:first-child {
-        // font-size: 38px;
-        color: var(--uilblue);
+        color: var(--theme-aqua);
       }
       &:nth-child(2) {
         display: block;
@@ -489,20 +480,19 @@ main {
 
   .progress-bar {
     //transition: width 1s 1s ease-in-out;
-
     height: 9px;
     border-radius: 2px 0 0 2px;
-    background-color: var(--uilblue);
+    background-color: var(--theme-aqua);
     display: block;
     background-color: transparent;
     background-size: 7px 9px;
     background-image: linear-gradient(
       90deg,
-      var(--uilblue) 40%,
+      var(--theme-aqua) 40%,
       transparent 40%
     );
-    filter: drop-shadow(0px 0px 6px var(--uilblue));
-    filter: drop-shadow(0px 0px 6px var(--uilblueglow));
+    //filter: drop-shadow(0px 0px 6px var(--theme-aqua));
+
     &.appear {
       width: 0;
     }
@@ -530,7 +520,13 @@ main {
     }
   }
 }
-
+@include mediamin(570px) {
+  header {
+    .theme-selector {
+      top: 20px;
+    }
+  }
+}
 @include mediamin(768px) {
   button.primary {
     width: auto;
@@ -572,12 +568,6 @@ main {
       font-size: 1.3rem;
     }
   }
-
-  header {
-    .theme-selector {
-      top: 20px;
-    }
-  }
 }
 @include mediamin(950px) {
   h1 {
@@ -586,7 +576,7 @@ main {
       display: block;
 
       &:first-child {
-        color: var(--uilblue);
+        color: var(--theme-aqua);
       }
       &:nth-child(2) {
         display: block;
@@ -604,11 +594,19 @@ main {
       grid-column-gap: 10%;
       flex-grow: 1;
     }
+    .progress-bar {
+      filter: drop-shadow(0px 0px 6px var(--theme-aqua-glow));
+    }
   }
 }
 @include mediamax(1200px) {
   header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 2px solid #{'rgba(var(--white), 0.05)'};
+  }
+  .light {
+    header {
+      border-bottom: 2px solid #{'rgba(var(--black), 0.05)'};
+    }
   }
 }
 @include mediamin(1200px) {
@@ -641,7 +639,7 @@ main {
       display: block;
       margin-left: -20%;
       &:first-child {
-        color: var(--uilblue);
+        color: var(--theme-aqua);
         margin-left: -15%;
       }
       &:nth-child(2) {
@@ -788,8 +786,7 @@ main {
 }
 
 .app.light {
-  background: var(--darkmodebg);
-  background: #ffeeee;
+  background: var(--theme-red-bg);
   &:before {
     background-color: transparent;
     background-size: 5px 100%;
@@ -816,7 +813,7 @@ main {
   li,
   p,
   a {
-    color: var(--red1);
+    color: var(--theme-red);
   }
   header,
   aside,
@@ -827,16 +824,18 @@ main {
   }
   header {
     h3 {
-      color: var(--red1);
+      color: var(--theme-red);
     }
   }
   main h1 span {
-    color: var(--red1);
+    color: var(--theme-red);
   }
+  .topics,
   aside {
+    border-right: 2px solid #{'rgba(var(--black), 0.05)'};
     .profile {
       a {
-        border-color: var(--red1);
+        border-color: var(--theme-red);
       }
     }
   }
@@ -844,42 +843,43 @@ main {
     .progress-bar-bg {
       height: 7px;
       border-radius: 5px;
-      background: var(--red1bg);
+      background: var(--theme-red-lighter);
     }
     .progress-bar {
       height: 7px;
       border-radius: 5px;
-      background: var(--red1);
+      background: var(--theme-red);
       filter: none;
     }
   }
   .button {
     &-small {
-      border: 2px solid var(--red1bg);
-      color: var(--red);
+      border: 2px solid var(--theme-red-light);
+      color: var(--theme-red);
       &:hover {
-        background: var(--red1bg);
+        background: var(--theme-red-light);
       }
     }
     &-primary {
       box-shadow: none;
-      background: var(--red1);
+      background: var(--theme-red);
       span {
         color: white;
       }
       &:hover {
-        background: var(--uired);
+        background: var(--brand-red);
         opacity: 0.8;
       }
     }
   }
+
   .work-history {
-    .description {
-      a,
-      span {
-        opacity: 1;
-      }
+    a,
+    span,
+    p {
+      opacity: 0.6;
     }
+
     .company-list {
       & > li ul,
       p {
@@ -887,15 +887,16 @@ main {
       }
       li:before,
       li:after {
-        background: var(--red1);
+        background: var(--theme-red);
+        opacity: 0.8;
       }
     }
   }
 
   .ios-switch {
-    background: var(--red2bg);
+    background: var(--theme-red-light);
     &:hover {
-      background: #5b3c404a;
+      background: var(--theme-red);
     }
     span {
       color: white;

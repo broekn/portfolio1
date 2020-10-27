@@ -1,13 +1,8 @@
 import React from 'react';
+import useDarkMode from './useDarkMode';
 
-const IosSwitch = ({ handleClick, darkTheme }) => {
-  // console.log(`${darkTheme ? 'dsf' : 'sdfsdf'}`);
-  //   console.log(toggleTextValues);
-  // console.log(null);
-  //console.log(true);
-  //const [darkTheme, handleClick] = useDarkMode();
-
-  console.log(darkTheme);
+const IosSwitch = () => {
+  const [darkTheme, handleClick] = useDarkMode();
   return (
     <div
       onClick={handleClick}

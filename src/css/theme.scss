@@ -20,7 +20,7 @@ header {
   }
 }
 main h1 span {
-  color: var(--uilblue);
+  color: var(--theme-aqua);
 }
 
 .skills {
@@ -34,7 +34,7 @@ main h1 span {
   .progress-bar {
     background-image: linear-gradient(
       90deg,
-      var(--uilblue) 40%,
+      var(--theme-aqua) 40%,
       transparent 40%
     );
   }
