@@ -24,35 +24,39 @@ import {
 } from './assets/img/index.js';
 
 const App = () => {
-  const [theme, setTheme] = useState('saas');
-  const [iosSwitchState, setIosSwitchState] = useState('on');
+  const [darkTheme, setDarkTheme] = useState(true);
+  // const [iosSwitchState, setIosSwitchState] = useState('on');
   const [copiedText, setCopiedText] = useState('');
   let e1 = 'broekn';
   let e2 = '@gmail.com';
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem('theme');
-    const localIosSwitch = window.localStorage.getItem('iosSwitchState');
-    setTheme(localTheme);
-    setIosSwitchState(localIosSwitch);
+    const localTheme = window.localStorage.getItem('darkTheme');
+    //const localIosSwitch = window.localStorage.getItem('darkTheme');
+    setDarkTheme(localTheme);
+    console.log('render');
+
+    //setIosSwitchState(localIosSwitch);
   }, []);
 
   const handleClick = () => {
-    if (theme === 'saas') {
-      window.localStorage.setItem('theme', 'light');
-      window.localStorage.setItem('iosSwitchState', 'off');
-      setTheme('light');
-      setIosSwitchState('off');
-    } else if (theme === 'light') {
-      window.localStorage.setItem('theme', 'saas');
-      window.localStorage.setItem('iosSwitchState', 'on');
-      setTheme('saas');
-      setIosSwitchState('on');
+    if (darkTheme) {
+      window.localStorage.setItem('darkTheme', false);
+      // console.log('localfalse');
+      //  window.localStorage.setItem('iosSwitchState', 'off');
+      setDarkTheme(false);
+      // setIosSwitchState('off');
+    } else {
+      window.localStorage.setItem('darkTheme', true);
+      //  window.localStorage.setItem('iosSwitchState', 'on');
+      setDarkTheme(true);
+      // console.log('localtrue');
+      //  setIosSwitchState('on');
     }
   };
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={`app ${darkTheme ? 'saas' : 'light'}`}>
       <ReactTooltip />
       <div className='preheader'>
         <div className='logo'>
@@ -66,14 +70,14 @@ const App = () => {
           <h5 className=''>Theme</h5>
           <IosSwitch
             handleClick={handleClick}
-            iosSwitchState={iosSwitchState}
-            toggleValues={theme}
+            //iosSwitchState={iosSwitchState}
+            darkTheme={darkTheme}
           />
-          <IosSwitch
+          {/* <IosSwitch
             handleClick={handleClick}
             iosSwitchState={iosSwitchState}
             toggleValues={theme}
-          />
+          /> */}
         </div>
       </header>
       <div className='wrapper'>
