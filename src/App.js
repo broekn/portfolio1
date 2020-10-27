@@ -24,39 +24,30 @@ import {
 } from './assets/img/index.js';
 
 const App = () => {
-  const [darkTheme, setDarkTheme] = useState(true);
-  // const [iosSwitchState, setIosSwitchState] = useState('on');
+  const [darkTheme, setDarkTheme] = useState('saas');
   const [copiedText, setCopiedText] = useState('');
   let e1 = 'broekn';
   let e2 = '@gmail.com';
 
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem('darkTheme');
-    //const localIosSwitch = window.localStorage.getItem('darkTheme');
-    setDarkTheme(localTheme);
-    console.log('render');
-
-    //setIosSwitchState(localIosSwitch);
-  }, []);
-
   const handleClick = () => {
-    if (darkTheme) {
-      window.localStorage.setItem('darkTheme', false);
-      // console.log('localfalse');
-      //  window.localStorage.setItem('iosSwitchState', 'off');
-      setDarkTheme(false);
-      // setIosSwitchState('off');
+    if (darkTheme === 'saas') {
+      window.localStorage.setItem('darkTheme', 'light');
+      setDarkTheme('light');
     } else {
-      window.localStorage.setItem('darkTheme', true);
-      //  window.localStorage.setItem('iosSwitchState', 'on');
-      setDarkTheme(true);
-      // console.log('localtrue');
-      //  setIosSwitchState('on');
+      window.localStorage.setItem('darkTheme', 'saas');
+      setDarkTheme('saas');
     }
   };
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem('darkTheme');
+    if (localTheme) {
+      setDarkTheme(localTheme);
+      console.log('render');
+    }
+  }, []);
 
   return (
-    <div className={`app ${darkTheme ? 'saas' : 'light'}`}>
+    <div className={`app ${darkTheme === 'saas' ? 'saas' : 'light'}`}>
       <ReactTooltip />
       <div className='preheader'>
         <div className='logo'>
@@ -68,16 +59,7 @@ const App = () => {
         <h3>UI/UX Designer + Developer</h3>
         <div className='theme-selector'>
           <h5 className=''>Theme</h5>
-          <IosSwitch
-            handleClick={handleClick}
-            //iosSwitchState={iosSwitchState}
-            darkTheme={darkTheme}
-          />
-          {/* <IosSwitch
-            handleClick={handleClick}
-            iosSwitchState={iosSwitchState}
-            toggleValues={theme}
-          /> */}
+          <IosSwitch handleClick={handleClick} darkTheme={darkTheme} />
         </div>
       </header>
       <div className='wrapper'>
