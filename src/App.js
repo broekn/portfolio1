@@ -66,8 +66,13 @@ const App = () => {
           <h5 className=''>Theme</h5>
           <IosSwitch
             handleClick={handleClick}
-            value={iosSwitchState}
-            toggleTextValues={theme}
+            iosSwitchState={iosSwitchState}
+            toggleValues={theme}
+          />
+          <IosSwitch
+            handleClick={handleClick}
+            iosSwitchState={iosSwitchState}
+            toggleValues={theme}
           />
         </div>
       </header>
@@ -196,7 +201,9 @@ const App = () => {
                     </a>
                     <span> • Startup • Founder • 2019 - (Spare-time)</span>
                   </div>
-                  <p>Tech: React Native</p>
+                  <ul>
+                    <li>Tech: React Native</li>
+                  </ul>
                 </li>
                 <li>
                   <h4>Senior Visual and UI Designer + Developer</h4>
