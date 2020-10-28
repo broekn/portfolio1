@@ -30,20 +30,19 @@ const App = () => {
   let e1 = 'broekn';
   let e2 = '@gmail.com';
 
-  console.log(darkTheme, 'app');
   return (
     <div className={`app ${darkTheme === 'saas' ? 'saas' : 'light'}`}>
       <ReactTooltip />
       <div className='preheader'>
         <div className='logo'>
-          <img alt='logo' src={logo}></img>
+          <img alt='logo' src={logo} width='30' height='30'></img>
         </div>
       </div>
       <header>
         <h2>Nicolaas Van den Broek</h2>
         <h3>UI/UX Designer + Developer</h3>
         <div className='theme-selector'>
-          <h5 className=''>Theme</h5>
+          <span className=''>Theme</span>
           {/* <IosSwitch /> */}
           <div
             onClick={handleClick}
@@ -68,21 +67,87 @@ const App = () => {
         </div>
         <aside>
           <div className='mugshot'>
-            <img src={mugshot2} alt='mugshot' />
+            <img src={mugshot2} alt='mugshot' width='100' height='100' />
           </div>
           <h3>Key Tech + Apps</h3>
           <div className='tech-apps'>
-            <img src={icnreact} alt='icon-react' data-tip='React 16+' />
-            <img src={icnhtml5} alt='icon-html5' data-tip='HTML5' />
-            <img src={icncss} alt='icon-css' data-tip='CSS3' />
-            <img src={icnjs} alt='icon-js' data-tip='Javascript/ES6+' />
-            <img src={icnnpm} alt='icon-npm' data-tip='NPM' />
-            <img src={icngit} alt='icon-git' data-tip='Git' />
-            <img src={icnvscode} alt='icon-vscode' data-tip='VSCode' />
-            <img src={icnfigma} alt='icon-figma' data-tip='Figma' />
-            <img src={icnillu} alt='icon-illu' data-tip='Illustator' />
-            <img src={icnsketch} alt='icon-sketch' data-tip='Sketch' />
-            <img src={icninvision} alt='icon-invision' data-tip='InVision' />
+            <img
+              src={icnreact}
+              alt='icon-react'
+              data-tip='React 16+'
+              width='25'
+              height='25'
+            />
+            <img
+              src={icnhtml5}
+              alt='icon-html5'
+              data-tip='HTML5'
+              width='23'
+              height='32'
+            />
+            <img
+              src={icncss}
+              alt='icon-css'
+              data-tip='CSS3'
+              width='23'
+              height='32'
+            />
+            <img
+              src={icnjs}
+              alt='icon-js'
+              data-tip='Javascript/ES6+'
+              width='25'
+              height='25'
+            />
+            <img
+              src={icnnpm}
+              alt='icon-npm'
+              data-tip='NPM'
+              width='28'
+              height='11'
+            />
+            <img
+              src={icngit}
+              alt='icon-git'
+              data-tip='Git'
+              width='25'
+              height='24'
+            />
+            <img
+              src={icnvscode}
+              alt='icon-vscode'
+              data-tip='VSCode'
+              width='25'
+              height='24'
+            />
+            <img
+              src={icnfigma}
+              alt='icon-figma'
+              data-tip='Figma'
+              width='17'
+              height='25'
+            />
+            <img
+              src={icnillu}
+              alt='icon-illu'
+              data-tip='Illustator'
+              width='25'
+              height='25'
+            />
+            <img
+              src={icnsketch}
+              alt='icon-sketch'
+              data-tip='Sketch'
+              width='26'
+              height='24'
+            />
+            <img
+              src={icninvision}
+              alt='icon-invision'
+              data-tip='InVision'
+              width='25'
+              height='25'
+            />
           </div>
           <div className='profile info-cv'>
             <h3>CV / Experience</h3>
@@ -125,7 +190,7 @@ const App = () => {
             href='https://www.behance.net/humanclarity'
           >
             <span>Portfolio</span>
-            <img src={icnexternal} alt='icon external' />
+            <img src={icnexternal} alt='icon external' width='14' height='14' />
           </a>
         </aside>
         <main>

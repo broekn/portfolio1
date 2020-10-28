@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const useDarkMode = () => {
-  const [darkTheme, setDarkTheme] = useState('light');
+  const [darkTheme, setDarkTheme] = useState('saas');
 
   const handleClick = () => {
     if (darkTheme === 'saas') {
@@ -16,7 +16,6 @@ const useDarkMode = () => {
     const localTheme = window.localStorage.getItem('darkTheme');
     if (localTheme) {
       setDarkTheme(localTheme);
-      console.log('render');
     }
   }, []);
 
