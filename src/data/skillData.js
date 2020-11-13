@@ -1,23 +1,23 @@
 const skillData = {
   develop: [
     {
-      skill: 'HTML5, CSS3, SCSS',
+      skill: 'HTML5, CSS3',
       progress: 95,
     },
     {
-      skill: 'Responsive, Cross-browser CSS, SASS',
+      skill: 'Cross-browser + Device SASS',
       progress: 95,
     },
     {
-      skill: 'SVG, CSS Animation',
+      skill: 'SVG + CSS Animation',
       progress: 75,
     },
     {
       skill: 'Javascript / ES6',
-      progress: 65,
+      progress: 60,
     },
     {
-      skill: 'React',
+      skill: 'React (v16+)',
       progress: 55,
     },
   ],
@@ -29,7 +29,7 @@ const skillData = {
     },
     {
       skill: 'Visual Design, Typography',
-      progress: 95,
+      progress: 85,
     },
     {
       skill: 'Wireframing, User Flows, Prototyping',
@@ -38,7 +38,7 @@ const skillData = {
 
     {
       skill: 'Logo + Branding',
-      progress: 75,
+      progress: 80,
     },
     {
       skill: 'Animation (After Effects)',

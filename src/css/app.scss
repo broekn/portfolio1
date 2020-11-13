@@ -56,12 +56,21 @@
   }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+figure {
+  margin: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
 html {
   height: 100%;
-}
-
-.app {
-  position: relative;
 }
 
 body,
@@ -70,15 +79,38 @@ body,
   min-height: 100vh;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 a {
   text-decoration: underline;
   color: inherit;
   cursor: pointer;
+}
+
+body {
+  font-family: 'eina_04-semibold', 'custom-serif', -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.2;
+  color: white;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+input,
+p,
+a {
+  color: white;
+}
+
+.topics,
+aside {
+  border-right: 2px solid #{'rgba(var(--white), 0.05)'};
 }
 button {
   background-color: transparent;
@@ -143,18 +175,11 @@ button {
     }
   }
 }
-figure {
-  margin: 0;
-}
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
 .app {
   background: var(--theme-blue);
   overflow: auto;
   min-height: 100vh;
+  position: relative;
   &:before {
     content: '';
     display: block;
@@ -169,34 +194,6 @@ input::-moz-focus-inner {
     z-index: 0;
     opacity: 0.03;
   }
-}
-
-body {
-  font-family: 'eina_04-semibold', 'custom-serif', -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.2;
-  color: white;
-}
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label,
-input,
-p,
-a {
-  color: white;
-}
-
-.topics,
-aside {
-  border-right: 2px solid #{'rgba(var(--white), 0.05)'};
 }
 
 .preheader {
@@ -224,55 +221,6 @@ aside {
 .topics {
   display: flex;
   display: none;
-}
-
-.ios-switch {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  height: 30px;
-  width: 70px;
-  display: flex;
-  transition: order 1s ease;
-  padding: 5px 5px;
-  align-items: center;
-  justify-content: space-between;
-  &:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-  &-text {
-    order: 2;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  span {
-    order: 2;
-    cursor: default;
-    font-size: 10px;
-    text-transform: uppercase;
-    padding: 0 3px;
-    opacity: 0.5;
-    user-select: none;
-  }
-  &-knob {
-    background: white;
-    border-radius: 20px;
-    height: 20px;
-    width: 20px;
-    flex: 0 0 auto;
-  }
-  &-off {
-    .ios-switch-knob {
-      order: 1;
-    }
-  }
-  &-on {
-    .ios-switch-knob {
-      order: 2;
-    }
-  }
 }
 
 header,
@@ -349,6 +297,7 @@ aside {
       margin: 0 12px 15px;
     }
   }
+
   .profile {
     margin-bottom: 20px;
     a {
@@ -412,7 +361,6 @@ main {
     opacity: 0;
     animation: fadeIn 0.3s forwards;
     span {
-      font-size: px;
       display: block;
 
       &:first-child {
@@ -570,6 +518,55 @@ main {
     }
   }
 }
+
+.ios-switch {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  height: 30px;
+  width: 70px;
+  display: flex;
+  transition: order 1s ease;
+  padding: 5px 5px;
+  align-items: center;
+  justify-content: space-between;
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  &-text {
+    order: 2;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  span {
+    order: 2;
+    cursor: default;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 0 3px;
+    opacity: 0.5;
+    user-select: none;
+  }
+  &-knob {
+    background: white;
+    border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    flex: 0 0 auto;
+  }
+  &-off {
+    .ios-switch-knob {
+      order: 1;
+    }
+  }
+  &-on {
+    .ios-switch-knob {
+      order: 2;
+    }
+  }
+}
 @include mediamin(950px) {
   h1 {
     span {
@@ -584,7 +581,7 @@ main {
       }
       &:last-child {
         display: block;
-        margin-left: 80px;
+        //  margin-left: 80px;
       }
     }
   }
@@ -650,6 +647,7 @@ main {
       &:last-child {
         display: block;
         margin-left: 0;
+        margin-left: -15%;
       }
     }
   }

@@ -196,7 +196,7 @@ const App = () => {
         <main>
           <h1>
             <span>I Design &amp; Build</span>
-            <span>_Great Digital </span>
+            <span>Great Digital </span>
             <span>Experiences.</span>
           </h1>
           <h2>
