@@ -189,7 +189,7 @@ const App = () => {
             className='button button-primary'
             href='https://www.behance.net/humanclarity'
           >
-            <span>Portfolio</span>
+            <span>Recent work</span>
             <img src={icnexternal} alt='icon external' width='14' height='14' />
           </a>
         </aside>
@@ -201,11 +201,11 @@ const App = () => {
           </h1>
           <h2>
             Good looking, easy-to-use and truly usefull SaaS applications,
-            mobile apps, websites and brands by utilising at minimum
-            current/2020 best-practice solutions or creating novel solutions to
-            unique problems. I have been creating products that provide value
-            for the user and in turn the business and it's stakeholders for over
-            12 years.
+            mobile apps, websites and brands by utilising at minimum current
+            best-practice solutions or creating novel solutions to unique
+            problems. I have been creating products that provide value for the
+            user and in turn the business and it's stakeholders for over 12
+            years.
           </h2>
           <div className='page-content'>
             <section>
@@ -333,6 +333,13 @@ const App = () => {
               </ul>
             </section>
           </div>
+          <iframe
+            style={{ marginTop: '100px' }}
+            width='100%'
+            height='800'
+            src='https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FtMyF6ckkNNT20ZzWcaGoLi%2FGolfTracker-0.4%3Fnode-id%3D211%253A571%26viewport%3D7929%252C4783%252C1%26scaling%3Dscale-down'
+            allowfullscreen
+          ></iframe>
         </main>
       </div>
     </div>

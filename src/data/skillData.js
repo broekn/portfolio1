@@ -13,7 +13,7 @@ const skillData = {
       progress: 75,
     },
     {
-      skill: 'Javascript / ES6',
+      skill: 'Javascript / ES6+',
       progress: 60,
     },
     {
