@@ -176,13 +176,13 @@ const App = () => {
               <button className='button-small'>Copy</button>
             </CopyToClipboard>
           </div>
-          <div className='profile info-status'>
+          {/* <div className='profile info-status'>
             <h3>Rates (AUD, inc GST)</h3>
             <p>
               0-40hrs: $90/hr, <br />
               40hrs+: $70/hr
             </p>
-          </div>
+          </div> */}
           <a
             target='_blank'
             rel='noopener noreferrer'
