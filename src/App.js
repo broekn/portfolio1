@@ -332,6 +332,20 @@ const App = () => {
                 </li>
               </ul>
             </section>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              className='button button-primary'
+              href='https://www.behance.net/humanclarity'
+            >
+              <span>Recent work</span>
+              <img
+                src={icnexternal}
+                alt='icon external'
+                width='14'
+                height='14'
+              />
+            </a>
           </div>
         </main>
       </div>

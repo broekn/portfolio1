@@ -711,6 +711,8 @@ main {
 }
 
 .work-history {
+  border-bottom: 1px solid rgba(var(--white), 0.1);
+  padding-bottom: 70px;
   h4 {
     margin-top: 0;
     font-size: 1.2rem;
@@ -753,6 +755,9 @@ main {
     position: relative;
     &:last-child {
       padding-bottom: 0;
+      &::after {
+        border: none;
+      }
     }
     &:before {
       opacity: 0.5;
