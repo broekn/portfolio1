@@ -204,8 +204,8 @@ const App = () => {
             mobile apps, websites and brands by utilising at minimum current
             best-practice solutions or creating novel solutions to unique
             problems. I have been creating products that provide value for the
-            user and in turn the business and it's stakeholders for over 12
-            years.
+            user and in turn the business and its stakeholders for over a
+            decade.
           </h2>
           <div className='page-content'>
             <section>
@@ -246,7 +246,10 @@ const App = () => {
                     >
                       VitaminTracker
                     </a>
-                    <span> • Startup • Founder • 2019 - (Spare-time)</span>
+                    <span>
+                      {' '}
+                      • Startup • Founder • 2019 - current (spare-time)
+                    </span>
                   </div>
                   <ul>
                     <li>Tech: React Native</li>
@@ -274,8 +277,8 @@ const App = () => {
                   </p>
                   <ul>
                     <li>
-                      Tasking/Workflow WebApp ('TeamFlow') — Senior UI +
-                      Material UI Dev{' '}
+                      Tasking/Workflow WebApp ('TeamFlow') — Senior UI Designer
+                      + Development: Angular 4+, Material UI, SCSS{' '}
                       {/* <a href='https://www.behance.net/gallery/99166183/TeamFlow_V2_LandingPage'>
                         TeamFlow
                       </a> */}
@@ -311,7 +314,7 @@ const App = () => {
                   </p>
                   <ul>
                     <li>Quoting WebApp - Senior UI + Angular + SASS</li>
-                    <li>Websites - Development in Wordpress, PHP, Jquery</li>
+                    <li>Websites - Development in Wordpress, PHP, JQuery</li>
                   </ul>
                 </li>
                 <li>
