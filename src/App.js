@@ -199,21 +199,35 @@ const App = () => {
             <span>Great Digital </span>
             <span>Experiences.</span>
           </h1>
-          <h2>
+          {/* <h2>
             Good looking, easy-to-use and truly usefull SaaS applications,
             mobile apps, websites and brands by utilising at minimum current
             best-practice solutions or creating novel solutions to unique
             problems. I have been creating products that provide value for the
             user and in turn the business and its stakeholders for over a
             decade.
+          </h2> */}
+          <h2>
+            I design visual interfaces which are a joy to use and look
+            fantastic. Whether it is an enterprise SaaS application, mobile,
+            website or even a static piece of communication, I can bring your
+            ideas to life and create an effective and memorable user experience.
+            <br />
+            <br />
+            I also build these experiences in a range of current technologies.
+            My iterative process fits in with any build team, big or small.
+            <br />
+            <br />
+            Check out my folio for examples of my recent work and get in touch
+            if you want a hand with super charging your UX.
           </h2>
           <div className='page-content'>
             <section>
               <h3>Key Skills:</h3>
               <div className='skills-wrap'>
-                <div className='skills skills-dev'>
-                  <h4>Development</h4>
-                  {skillData.develop.map((item, index) => (
+                <div className='skills skills-des'>
+                  <h4>Design</h4>
+                  {skillData.design.map((item, index) => (
                     <ProgressBar
                       skill={item.skill}
                       progress={item.progress}
@@ -221,9 +235,9 @@ const App = () => {
                     />
                   ))}
                 </div>
-                <div className='skills skills-des'>
-                  <h4>Design</h4>
-                  {skillData.design.map((item, index) => (
+                <div className='skills skills-dev'>
+                  <h4>Development</h4>
+                  {skillData.develop.map((item, index) => (
                     <ProgressBar
                       skill={item.skill}
                       progress={item.progress}
@@ -246,10 +260,7 @@ const App = () => {
                     >
                       VitaminTracker
                     </a>
-                    <span>
-                      {' '}
-                      • Startup • Founder • 2019 - current (spare-time)
-                    </span>
+                    <span> • Startup • Founder • 2019</span>
                   </div>
                   <ul>
                     <li>Tech: React Native</li>
