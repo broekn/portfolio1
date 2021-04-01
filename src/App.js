@@ -214,8 +214,9 @@ const App = () => {
             ideas to life and create an effective and memorable user experience.
             <br />
             <br />
-            I also build these experiences in a range of current technologies.
-            My iterative process fits in with any build team, big or small.
+            I also build these experiences with current best-practice
+            technologies. My iterative process fits in with any build team, big
+            or small. I've been doing this for over a decade.
             <br />
             <br />
             Check out my folio for examples of my recent work and get in touch
