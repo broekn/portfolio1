@@ -252,6 +252,47 @@ const App = () => {
               <h3>Work History:</h3>
               <ul className='company-list'>
                 <li>
+                  <h4>UX/UI Designer</h4>
+                  <div className='description'>
+                    <a
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      href='http://alintaenergy.com.au'
+                    ></a>
+                    <span>
+                      AlintaEnergy • Power Company • Apr 2021 - current
+                    </span>
+                    <ul>
+                      <li>'MyAccount' WebApp - UI/Visual designer.</li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li>
+                  <h4>UI/Visual Designer</h4>
+                  <div className='description'>
+                    <a
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      href='https://fanhubmedia.com'
+                    ></a>
+                    <span>
+                      Fanhubmedia • Sports Fan Engagement Products • Mar 2021 -
+                      April 2021
+                    </span>
+                    <ul>
+                      <li>
+                        'The Sun' Euro 2020 Sweepstakes WebApp - UI/Visual
+                        designer.
+                      </li>
+                      <li>
+                        Official Tokyo Olympics 2020 Website - Minor visual
+                        designer.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
                   <h4>Product Owner</h4>
                   <div className='description'>
                     <a
@@ -261,7 +302,7 @@ const App = () => {
                     >
                       VitaminTracker
                     </a>
-                    <span> • Startup • Founder • 2019</span>
+                    <span> • Startup • Founder • Nov 2020 - Feb 2021 </span>
                   </div>
                   <ul>
                     <li>Tech: React Native</li>
@@ -279,7 +320,7 @@ const App = () => {
                     </a>
                     <span>
                       &nbsp;• Finance/Fintech Company • 2500 Employees • 2015 -
-                      current
+                      Nov 2020
                     </span>
                   </div>
                   <p>
