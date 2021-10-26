@@ -208,19 +208,18 @@ const App = () => {
             decade.
           </h2> */}
           <h2>
-            I design visual interfaces which are a joy to use and look
-            fantastic. Whether it is an enterprise SaaS application, mobile,
-            website or even a static piece of communication, I can bring your
-            ideas to life and create an effective and memorable user experience.
+            I design user interfaces which are intuitive to use and look
+            great. Utilising current best practice userflow/interaction patterns – or solving novel problems with creative solutions. 
             <br />
             <br />
-            I also build these experiences with current best-practice
-            technologies. My iterative process fits in with any build team, big
-            or small. I've been doing this for over a decade.
+            Whether it is an enterprise SaaS application, mobile/webapp or website, I can bring your ideas to life (or improve current product) and create lowest cognitive-load and enjoyable digital experiences.
+            <br />
+            <br />
+            I am also expert in CSS/Interaction Design, allowing me to understand possibilities and limitations of implementation.
             <br />
             <br />
             Check out my folio for examples of my recent work and get in touch
-            if you want a hand with super charging your UX.
+            if you want a hand with super charging your UX/UI.
           </h2>
           <div className='page-content'>
             <section>
@@ -258,12 +257,12 @@ const App = () => {
                       target='_blank'
                       rel='noopener noreferrer'
                       href='http://alintaenergy.com.au'
-                    ></a>
+                    >AlintaEnergy </a>
                     <span>
-                      AlintaEnergy • Energy Company • Apr 2021 - current
+                       • Energy Company • Apr 2021 - current
                     </span>
                     <ul>
-                      <li>'MyAccount' WebApp - Senior UI/Visual designer.</li>
+                      <li>'MyAccount' WebApp - Senior UX/UI Designer. User Testing, translating to UI</li>
                     </ul>
                   </div>
                 </li>
@@ -275,9 +274,9 @@ const App = () => {
                       target='_blank'
                       rel='noopener noreferrer'
                       href='https://fanhubmedia.com'
-                    ></a>
+                    >Fanhubmedia </a>
                     <span>
-                      Fanhubmedia • Sports Fan Engagement Products • Mar 2021 -
+                       • Sports Fan Engagement Products • Mar 2021 -
                       April 2021
                     </span>
                     <ul>
@@ -337,10 +336,10 @@ const App = () => {
                       </a> */}
                     </li>
                     <li>
-                      Financial Management WebApp ('Ascend') — UI/UX Design +
+                      Financial Management WebApp ('Ascend') — UX/UI Design +
                       Consulting
                     </li>
-                    <li>Scoping/Budgeting WebApp — Senior UI/UX</li>
+                    <li>Scoping/Budgeting WebApp — Senior UX/UI</li>
                     <li>New Logo Design (Custom type)</li>
                     <li>Tutoring other designers</li>
                     <li>
