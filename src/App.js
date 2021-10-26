@@ -260,10 +260,10 @@ const App = () => {
                       href='http://alintaenergy.com.au'
                     ></a>
                     <span>
-                      AlintaEnergy • Power Company • Apr 2021 - current
+                      AlintaEnergy • Energy Company • Apr 2021 - current
                     </span>
                     <ul>
-                      <li>'MyAccount' WebApp - UI/Visual designer.</li>
+                      <li>'MyAccount' WebApp - Senior UI/Visual designer.</li>
                     </ul>
                   </div>
                 </li>
@@ -282,11 +282,11 @@ const App = () => {
                     </span>
                     <ul>
                       <li>
-                        'The Sun' Euro 2020 Sweepstakes WebApp - UI/Visual
+                        'The Sun' Euro 2020 Football Sweepstakes WebApp - UI/Visual
                         designer.
                       </li>
                       <li>
-                        Official Tokyo Olympics 2020 Website - Minor visual
+                        Tokyo Olympics 2020 Website - Prizes section - Visual
                         designer.
                       </li>
                     </ul>
@@ -302,7 +302,7 @@ const App = () => {
                     >
                       VitaminTracker
                     </a>
-                    <span> • Startup • Founder • Nov 2020 - Feb 2021 </span>
+                    <span> • Startup • Founder • Nov 2020 - current </span>
                   </div>
                   <ul>
                     <li>Tech: React Native</li>
