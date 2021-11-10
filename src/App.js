@@ -354,7 +354,7 @@ const App = () => {
                     <a
                       target='_blank'
                       rel='noopener noreferrer'
-                      href='//aptituredigital.com'
+                      href='//aptiture.com'
                     >
                       AptitureDigital
                     </a>
